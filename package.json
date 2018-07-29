@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/lodash": "^4.14.115",
+    "@types/sanctuary": "^0.14.2",
     "jest": "^23.4.2",
     "lodash": "^4.17.10",
     "ts-jest": "^23.0.1",
@@ -39,6 +40,8 @@
       "node"
     ],
     "testURL": "http://localhost/"
-
+  },
+  "dependencies": {
+    "sanctuary": "^0.15.0"
   }
 }

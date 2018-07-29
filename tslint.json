@@ -6,6 +6,8 @@
     ],
     "jsRules": {},
     "rules": {
+        "curly": false,
+        "interface-name": false,
         "quotemark": [true, "single"]
     },
     "rulesDirectory": []
