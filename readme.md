@@ -9,7 +9,7 @@ Includes TypeScript definitions.
 # API
 - `then(fn)(promise)`: Attaches `fn` to the `then` method of a promise
 - `catchP(fn)(promise)`: Attaches `fn` to the `catch` method of a promise
-- `fork(fn1, fn2)(promise)`: Runs fn1 if the promise errors, and fn2 if the promise succeeds. Useful for converting a promise to an Either via e.g., Sanctuary.
+- `forkP(fn1, fn2)(promise)`: Runs fn1 if the promise errors, and fn2 if the promise succeeds. Useful for converting a promise to an Either via e.g., Sanctuary.
 
 # Examples
 
@@ -32,7 +32,7 @@ Includes TypeScript definitions.
     // Promise(21)
 
 ## Try/catch
-The `fork` function follows left/right Either semantics, so the rejection branch is the first function, and the resolution branch is the second function.
+The `forkP` function follows left/right Either semantics, so the rejection branch is the first function, and the resolution branch is the second function.
 
     flow(
       (n: number) => Promise.resolve(n),

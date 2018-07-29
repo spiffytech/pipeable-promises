@@ -1,6 +1,6 @@
 {
   "name": "pipeable-promises",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utility functions for pipeing promises through functions, functional style",
   "repository": {"type": "git", "url": "https://github.com/spiffytech/pipeable-promises"},
   "main": "dist/index.js",
