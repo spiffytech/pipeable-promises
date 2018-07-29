@@ -41,7 +41,5 @@
     ],
     "testURL": "http://localhost/"
   },
-  "dependencies": {
-    "sanctuary": "^0.15.0"
-  }
+  "dependencies": {}
 }
