@@ -24,10 +24,10 @@ describe('It chains promises', () => {
 
   it('catches promises', () => {
     return flow(
-      (n: number): Promise<number> => Promise.resolve(n),
-      then((n) => Promise.reject(n / 2)),
+      (n: number): Promise<number> => Promise.reject(n),
+      then((n) => n / 2),
       catchP((n) => n),
-      then((n) => expect(n).toEqual(21)),
+      then((n) => expect(n).toEqual(42)),
     )(42);
   });
 });

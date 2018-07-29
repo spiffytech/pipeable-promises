@@ -1,16 +1,15 @@
 {
-  "name": "promise-pipeline",
+  "name": "pipeable-promises",
   "version": "0.1.0",
-  "description": "Utility functions for using promises in function pipelines",
   "main": "src/index.js",
+  "description": "Utility functions for pipeing promises through functions, functional style",
   "scripts": {
     "test": "jest"
   },
   "keywords": [
     "promise",
-    "pipeline",
-    "either",
-    "maybe"
+    "pipe",
+    "functional"
   ],
   "author": "spiffytech",
   "license": "MIT",
