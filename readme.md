@@ -17,7 +17,7 @@ Includes TypeScript definitions.
     const flow = require('lodash/fp').flow;
 
     flow(
-      (n: number): Promise<number> => Promise.resolve(n),
+      (n) => Promise.resolve(n),
       then((n) => n / 2),
       then((n) => expect(n).toEqual(21)),
     )(42);
@@ -25,7 +25,7 @@ Includes TypeScript definitions.
 
 ## Catching errors
     flow(
-      (n: number): Promise<number> => Promise.reject(n),
+      (n) => Promise.reject(n),
       then((n) => n / 2),
       catchP((n) => n),
     )(42);
@@ -47,6 +47,8 @@ The `fork` function follows left/right Either semantics, so the rejection branch
     // Promise(84)
 
 ## Sanctuary Maybe/Either types
+The module is designed to integrate with Sanctuary in a point-free style.
+
     flow(
       (n: number): Promise<number> => Promise.resolve(n),
       then((n) => Promise.resolve(n / 2)),
@@ -54,11 +56,10 @@ The `fork` function follows left/right Either semantics, so the rejection branch
     )(42);
     // Promise(Right(21))
     
-You can also use Sanctuary types with `forkP`:
-
+You can also convert promises to Sanctuary types with `forkP`, which performs a one-step then/catch on a promise:
 
     flow(
-      (n: number): Promise<number> => Promise.resolve(n),
+      (n) => Promise.resolve(n),
       then((n) => Promise.resolve(n / 2)),
       forkP(S.Left, S.Right),
     )(42);
