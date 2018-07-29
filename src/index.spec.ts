@@ -16,9 +16,9 @@ describe('It chains promises', () => {
 
   it('chains nested promises', () => {
     return flow(
-      (n: number): Promise<number> => Promise.resolve(n),
+      (n: number) => Promise.resolve(n),
       then((n) => Promise.resolve(n / 2)),
-      then((n) => expect(n).toEqual(21)),
+      then((n: number) => expect(n).toEqual(21)),
     )(42);
   });
 
